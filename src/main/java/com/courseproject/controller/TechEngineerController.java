@@ -84,4 +84,11 @@ public class TechEngineerController {
         autoInfService.save(autoInf);
         return "redirect:/app/techengineers";
     }
+
+    @GetMapping("/allautoinf")
+    public String getAllAutoInf(Model model){
+        // После мы будем обрабатывать атрибут с именем techEngineers в techEngineersList.
+        model.addAttribute("autoInf", autoInfService.findAll());
+        return "showTransportInf";
+    }
 }

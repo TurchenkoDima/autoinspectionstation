@@ -26,6 +26,7 @@
     </table>
     <br>
     <a href="/app/addtechengineer"> ADD NEW TECH ENGINEER! </a><br>
-    <a href="/app/addAutoInf"> Add new auto </a><br>
+    <a href="/app/addAutoInf"> ADD NEW AUTO! </a><br>
+    <a href="/app/allautoinf"> SHOW ALL REGISTERED AUTOMOBILES! </a><br>
 </body>
 </html>

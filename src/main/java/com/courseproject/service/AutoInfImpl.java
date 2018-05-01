@@ -5,6 +5,8 @@ import com.courseproject.entity.AutoInf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class AutoInfImpl implements AutoInfService {
 
@@ -14,5 +16,10 @@ public class AutoInfImpl implements AutoInfService {
     @Override
     public void save(AutoInf autoInf) {
             autoInfDao.save(autoInf);
+    }
+
+    @Override
+    public List<AutoInf> findAll() {
+        return autoInfDao.findAll();
     }
 }

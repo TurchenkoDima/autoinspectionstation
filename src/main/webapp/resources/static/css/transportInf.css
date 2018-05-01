@@ -134,3 +134,7 @@ button.submit:active {
     padding:5px 8px;
 }
 
+.contact_form input, .contact_form textarea {
+    padding-right:30px;
+}
+

@@ -17,23 +17,23 @@
             </li>
             <li>
                 <label for="owner"> Owner of Car: </label>
-                <input type="text" name="owner" placeholder="Daniel Redkliff"/>
+                <input type="text" name="owner" placeholder="Daniel Redkliff" required/>
             </li>
             <li>
                 <label for="registrationPlate"> Registration plate: </label>
-                <input type="text" name="registrationPlate" placeholder="1234 AB-7"/>
+                <input type="text" name="registrationPlate" placeholder="1234 AB-7" required/>
             </li>
             <li>
                 <label for="model"> Model: </label>
-                <input type="text" name="model" placeholder="WOLKSWAGEN GOLF"/>
+                <input type="text" name="model" placeholder="WOLKSWAGEN GOLF" required/>
             </li>
             <li>
                 <label for="yearOfManufacture"> Year of manufacture: </label>
-                <input type="text" name="yearOfManufacture" placeholder="1986"/>
+                <input type="text" name="yearOfManufacture" placeholder="1986" required/>
             </li>
             <li>
                 <label for="color"> Color: </label>
-                <input type="text" name="color" placeholder="white"/>
+                <input type="text" name="color" placeholder="white" required/>
             </li>
             <li>
                 <label for="type">Vehicle type: </label>

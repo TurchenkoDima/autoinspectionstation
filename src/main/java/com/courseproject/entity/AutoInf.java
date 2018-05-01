@@ -1,6 +1,8 @@
 package com.courseproject.entity;
 
 public class AutoInf {
+
+    private int id;
     private String owner;
     private String registrationPlate;
     private String model;
@@ -15,6 +17,14 @@ public class AutoInf {
 
     public AutoInf(){
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getOwner() {

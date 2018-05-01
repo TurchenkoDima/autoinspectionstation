@@ -1,8 +1,11 @@
 package com.courseproject.dao;
 
 import com.courseproject.entity.AutoInf;
+import com.courseproject.mapper.AutoInfMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+
+import java.util.List;
 
 public class AutoInfDaoImpl implements AutoInfDao {
 
@@ -19,5 +22,11 @@ public class AutoInfDaoImpl implements AutoInfDao {
         jdbcTemplate.update(sql, autoInf.getOwner(), autoInf.getRegistrationPlate(), autoInf.getModel(), autoInf.getYearOfManufacture(),
                 autoInf.getColor(), autoInf.getType(), autoInf.getCategory(), autoInf.getEngineType(), autoInf.getEcoClass(), autoInf.getNumberOfaxles(),
                 autoInf.getBrakeSystem());
+    }
+
+    @Override
+    public List<AutoInf> findAll() {
+        String sql = "SELECT * FROM autoinf";
+        return jdbcTemplate.query(sql, new AutoInfMapper());
     }
 }
