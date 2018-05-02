@@ -9,4 +9,6 @@ public interface AutoInfService {
     void save (AutoInf autoInf);
 
     List<AutoInf> findAll();
+
+    AutoInf getById(int id);
 }

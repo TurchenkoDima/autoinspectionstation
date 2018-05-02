@@ -36,6 +36,7 @@
             <td>${auto.ecoClass}</td>
             <td>${auto.numberOfaxles}</td>
             <td>${auto.brakeSystem}</td>
+            <td><a class="testCarButton" href="/app/testCar/${auto.id}"> TEST THIS CAR! </a></td>
         </tr>
         </#list>
     </table>

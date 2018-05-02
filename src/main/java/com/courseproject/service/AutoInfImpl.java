@@ -22,4 +22,9 @@ public class AutoInfImpl implements AutoInfService {
     public List<AutoInf> findAll() {
         return autoInfDao.findAll();
     }
+
+    @Override
+    public AutoInf getById(int id) {
+        return autoInfDao.getById(id);
+    }
 }

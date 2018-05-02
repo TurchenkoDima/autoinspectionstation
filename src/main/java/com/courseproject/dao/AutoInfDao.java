@@ -9,4 +9,6 @@ public interface AutoInfDao {
     void save (AutoInf autoInf);
 
     List<AutoInf> findAll();
+
+    AutoInf getById(int id);
 }

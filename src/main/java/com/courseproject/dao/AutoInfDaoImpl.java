@@ -29,4 +29,10 @@ public class AutoInfDaoImpl implements AutoInfDao {
         String sql = "SELECT * FROM autoinf";
         return jdbcTemplate.query(sql, new AutoInfMapper());
     }
+
+    @Override
+    public AutoInf getById(int id) {
+        String sql = "SELECT * FROM autoinf WHERE id = ?";
+        return jdbcTemplate.queryForObject(sql, new AutoInfMapper(), id);
+    }
 }

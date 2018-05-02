@@ -91,4 +91,10 @@ public class TechEngineerController {
         model.addAttribute("autoInf", autoInfService.findAll());
         return "showTransportInf";
     }
+
+    @GetMapping("/testCar/{id}")
+    public String getCarById(@PathVariable("id") int id, Model model){
+        model.addAttribute("auto", autoInfService.getById(id));
+        return "showTestCar";
+    }
 }
