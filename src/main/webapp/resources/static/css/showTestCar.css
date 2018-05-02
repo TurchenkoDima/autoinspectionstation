@@ -1,3 +1,10 @@
+* {margin: 0; padding: 0;} /* обнуляем отступы */
+body {
+    text-align: center; /* выравниваем все содержимое body по центру */
+    background: #fff; /* цвет фона для наглядности */
+}
+
+
 .table_blur {
     background: #f5ffff;
     border-collapse: collapse;
@@ -51,12 +58,15 @@
 }
 
 div#carousel {
+    margin: 0 auto;
+    background: #FFF;
     perspective: 1200px;
     padding: 20px;
     font-size: 0;
     margin-bottom: 3rem;
     overflow: hidden;
-    width: 1200px; }
+    width: 1200px;
+}
 
 figure#spinner {
     transform-style: preserve-3d;
@@ -104,3 +114,106 @@ div#carousel ~ span {
 div#carousel ~ span:hover {
     color: #888;
     cursor: pointer; }
+
+.span1{
+    position: absolute;
+    width: 250px;
+    top: 100px;
+    left: 150px;
+}
+
+.span2{
+    position: absolute;
+    width: 250px;
+    top: 250px;
+    left: 150px;
+}
+
+.span3{
+    position: absolute;
+    width: 250px;
+    top: 400px;
+    left: 150px;
+}
+
+.span4{
+    position: absolute;
+    width: 250px;
+    top: 100px;
+    left: 450px;
+}
+
+.span5{
+    position: absolute;
+    width: 250px;
+    top: 250px;
+    left: 450px;
+}
+
+.span6{
+    position: absolute;
+    width: 250px;
+    top: 400px;
+    left: 450px;
+}
+
+.span7{
+    position: absolute;
+    width: 250px;
+    top: 100px;
+    left: 750px;
+}
+
+.span8{
+    position: absolute;
+    width: 250px;
+    top: 250px;
+    left: 750px;
+}
+
+.span9{
+    position: absolute;
+    width: 250px;
+    top: 400px;
+    left: 750px;
+}
+
+.stat{
+    color: #666;
+    padding-bottom: 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #555;
+    line-height: 1;
+    font-size: 32px;
+}
+
+.number{
+    font-size: 30px;
+    color: #fff;
+}
+
+.unit{
+    color: #999999;
+    font-size: 26px;
+    padding-left: 20px;
+}
+
+div#wrap {
+    margin: 0 auto;
+    padding: 10px;
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    background: #181C1F;
+    text-align: right;
+    border: 3px dashed #645a4e;
+}
+
+.textStyle{
+    position: absolute;
+    color: #FBFBFB; font-family: Century Gothic, sans-serif;
+    margin-top:  30px;
+    margin-left: 20%;
+    text-align: center;
+    font-size: 240%;
+}
