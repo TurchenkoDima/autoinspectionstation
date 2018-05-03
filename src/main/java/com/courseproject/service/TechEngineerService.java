@@ -10,6 +10,8 @@ public interface TechEngineerService {
 
     TechEngineer getById(int id);
 
+    TechEngineer getByLogin(String login);
+
     List<TechEngineer> findAll();
 
     void delete (int id);

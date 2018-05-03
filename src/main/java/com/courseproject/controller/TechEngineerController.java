@@ -24,6 +24,16 @@ public class TechEngineerController {
         return "index";
     }
 
+    @PostMapping("/")
+    public String autorization(@ModelAttribute("form-login") TechEngineer techEngineerForm) {
+        TechEngineer engineer = techEngineerService.getByLogin(techEngineerForm.getLogin());
+        if (engineer!=null) {
+            if (engineer.getPassword().equals(techEngineerForm.getPassword()))
+                return "redirect:/app/techengineers";
+        }
+        return "index";
+    }
+
     @GetMapping("/hello")
     // Возвращает название нужного Темплейта.
     public String hello(){

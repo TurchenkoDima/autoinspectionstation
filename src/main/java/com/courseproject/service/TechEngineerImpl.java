@@ -24,6 +24,9 @@ public class TechEngineerImpl implements TechEngineerService {
         return techEngineerDao.getById(id);
     }
 
+    @Override
+    public TechEngineer getByLogin(String login) { return techEngineerDao.getByLogin(login); }
+
 
     @Override
     public List<TechEngineer> findAll() {

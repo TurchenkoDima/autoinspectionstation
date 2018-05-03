@@ -18,14 +18,25 @@ public class TechEngineerDaoImpl implements TechEngineerDao {
 
     @Override
     public void save(TechEngineer techEngineer) {
-        String sql = "INSERT INTO techengineers (te_name, te_surname, te_fathersname) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, techEngineer.getName(), techEngineer.getSurname(), techEngineer.getFathersName());
+        String sql = "INSERT INTO techengineers (te_name, te_surname, te_fathersname, te_login, te_password) VALUES (?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, techEngineer.getName(), techEngineer.getSurname(), techEngineer.getFathersName(), techEngineer.getLogin(), techEngineer.getPassword());
     }
 
     @Override
     public TechEngineer getById(int id) {
         String sql = "SELECT * FROM techengineers WHERE te_id = ?";
         return jdbcTemplate.queryForObject(sql, new TechEngineerMapper(), id);
+    }
+
+    @Override
+    public TechEngineer getByLogin(String login) {
+        String sql = "SELECT * FROM techengineers WHERE te_login = " + "'" + login + "'";
+        List<TechEngineer> list = jdbcTemplate.query(sql, new TechEngineerMapper());
+
+        if (list.isEmpty())
+            return null;
+
+        return list.get(0);
     }
 
     @Override
@@ -42,8 +53,8 @@ public class TechEngineerDaoImpl implements TechEngineerDao {
 
     @Override
     public void update(TechEngineer techEngineer) {
-        String sql = "UPDATE techengineers SET te_name=?, te_surname=?, te_fathersname=? WHERE te_id=?";
-        jdbcTemplate.update(sql, techEngineer.getName(), techEngineer.getSurname(), techEngineer.getFathersName(), techEngineer.getId());
+        String sql = "UPDATE techengineers SET te_name=?, te_surname=?, te_fathersname=?, te_login=?, te_password=? WHERE te_id=?";
+        jdbcTemplate.update(sql, techEngineer.getName(), techEngineer.getSurname(), techEngineer.getFathersName(), techEngineer.getLogin(), techEngineer.getPassword(), techEngineer.getId());
         System.out.println(techEngineer.getId());
     }
 }

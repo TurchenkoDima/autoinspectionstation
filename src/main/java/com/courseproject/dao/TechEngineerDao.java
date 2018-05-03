@@ -11,6 +11,8 @@ public interface TechEngineerDao {
 
     TechEngineer getById(int id);
 
+    TechEngineer getByLogin(String login);
+
     List<TechEngineer> findAll();
 
     void delete (int id);

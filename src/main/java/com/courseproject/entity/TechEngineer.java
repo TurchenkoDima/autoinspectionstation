@@ -8,6 +8,7 @@ public class TechEngineer {
     private String fathersName;
     private String login;
     private String password;
+    private final String errorLoginMessage = "ERROR! CHECK YOUR LOGIN OR PASSWORD!";
 
     public TechEngineer(){
 
@@ -70,12 +71,17 @@ public class TechEngineer {
         this.password = password;
     }
 
+    public String getErrorLoginMessage() {
+        return errorLoginMessage;
+    }
+
     @Override
     public String toString() {
         return "TechEngineer{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", fathersName='" + fathersName + '\'' +
+
                 '}';
     }
 }
