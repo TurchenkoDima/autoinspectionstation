@@ -114,4 +114,5 @@ public class AutoInf {
     public void setBrakeSystem(String brakeSystem) {
         this.brakeSystem = brakeSystem;
     }
+
 }
