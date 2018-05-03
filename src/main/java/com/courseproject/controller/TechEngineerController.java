@@ -97,4 +97,5 @@ public class TechEngineerController {
         model.addAttribute("auto", autoInfService.getById(id));
         return "showTestCar";
     }
+
 }

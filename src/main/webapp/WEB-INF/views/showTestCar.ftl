@@ -8,20 +8,35 @@
     <link rel="stylesheet" type="text/css" href="/resources/static/css/showTestCar.css"/>
     <script src="/resources/static/js/carousel.js"></script>
 
+    <header>
+        <div class="header-container">
+            <a href="/app/allautoinf" class="logo"><img src="/resources/static/img/LOGO.png" alt width="150"></a>
+            <nav>
+                <ul>
+                    <li><a href="/app/techengineers" class = "number">Main menu</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="additional_second_content">
+        <p class = "textStyle_Additional_second_content">
+            <span class="dashedBlack"> PLEASE, CHOSE THE SYSTEM TO TEST: </span>
+        </p>
+    </div>
+
     <div id="carousel">
         <figure id="spinner">
-            <img src="/resources/static/img/brakeSystem.jpg" alt>
-            <img src="/resources/static/img/engine.jpg" alt>
-            <img src="/resources/static/img/Exhaust.jpg" alt>
-            <img src="/resources/static/img/Headlamps.jpg" alt>
-            <img src="/resources/static/img/rudder.jpg" alt>
+            <div id="image"><img src="/resources/static/img/brakeSystem.jpg" alt></div>
+            <div id="image"><img src="/resources/static/img/engine.jpg" alt></div>
+            <div id="image"><a href="/app/test/exhaust"><img src="/resources/static/img/Exhaust.jpg" alt></a></div>
+            <div id="image"><a href="/app/test/exhaust"><img src="/resources/static/img/Headlamps.jpg" alt></a></div>
+            <div id="image"><img src="/resources/static/img/rudder.jpg" alt></div>
         </figure>
     </div>
 
     <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
     <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
-
-
     <div id = "wrap">
         <p class = "textStyle">
             TECHNICAL OVERVIEW OF CHOSEN CAR!
