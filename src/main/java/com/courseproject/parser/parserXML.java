@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class parserXML {
     public static void main(String[] args) throws Exception {
-        ArrayList<String> persons = new ArrayList<>();
         DOMParser parser = new DOMParser();
         parser.parse("D:\\git\\autoinspectionstation\\src\\main\\java\\com\\courseproject\\resources\\BreakSystem.xml");
         Document document = parser.getDocument();
