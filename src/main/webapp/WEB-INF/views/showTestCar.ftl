@@ -27,7 +27,7 @@
 
     <div id="carousel">
         <figure id="spinner">
-            <div id="image"><a href="/app/test/breakSystem"><img src="/resources/static/img/brakeSystem.jpg" alt></a></div>
+            <div id="image"><a href="/app/test/breakSystem/${auto.id}"><img src="/resources/static/img/brakeSystem.jpg" alt></a></div>
             <div id="image"><img src="/resources/static/img/engine.jpg" alt></div>
             <div id="image"><img src="/resources/static/img/Exhaust.jpg" alt></div>
             <div id="image"><img src="/resources/static/img/Headlamps.jpg" alt></div>

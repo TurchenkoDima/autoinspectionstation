@@ -13,6 +13,7 @@ public class BreakSystem extends AutoSystem {
     @Override
     public boolean toDoTest() throws IOException, SAXException {
         malfunction = ParserXML.pars(URL);
+        generatedErrors.clear();
         int rand = RandomSystem.generateError();
         if (rand > 0) {
             for (int i = 0; i < rand; i++) {

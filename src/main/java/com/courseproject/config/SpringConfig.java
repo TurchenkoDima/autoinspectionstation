@@ -1,9 +1,6 @@
 package com.courseproject.config;
 
-import com.courseproject.dao.AutoInfDao;
-import com.courseproject.dao.AutoInfDaoImpl;
-import com.courseproject.dao.TechEngineerDao;
-import com.courseproject.dao.TechEngineerDaoImpl;
+import com.courseproject.dao.*;
 import com.courseproject.entity.AutoInf;
 import com.courseproject.entity.BreakSystem;
 import org.springframework.context.annotation.Bean;
@@ -42,6 +39,11 @@ public class SpringConfig {
     public AutoInfDao getAutoInfDao(){
         return new AutoInfDaoImpl(getJdbcTemplate());
 
+    }
+
+    @Bean
+    public TestSystemsDao getTestSystemDao(){
+        return new TestSystemsImpl(getJdbcTemplate());
     }
 
     @Bean

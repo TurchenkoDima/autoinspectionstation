@@ -8,14 +8,30 @@
     <title>Break System Test</title>
 </head>
 <body>
+    <link rel="stylesheet" type="text/css" href="/resources/static/css/showTransportInf.css"/>
 <table>
-    <#list errors as error>
-    <tr>
-        <p>${error}</p>
-    </tr>
-    <#else>
-        No ERRORS!
-    </#list>
+    <table>
+        <tr>
+            <th>ERRORS LIST</th>
+        </tr>
+        <#list errors as err>
+        <tr>
+            <td>${err.error}</td>
+        </tr>
+        <#else>
+        <tr>
+             NO ERRORS!
+
+        </tr>
+        </#list>
+    </table>
+    <#--<#list errors as error>-->
+    <#--<tr>-->
+        <#--<p>${error}</p>-->
+    <#--</tr>-->
+    <#--<#else>-->
+        <#--No ERRORS!-->
+    <#--</#list>-->
 </table>
 </body>
 </html>
