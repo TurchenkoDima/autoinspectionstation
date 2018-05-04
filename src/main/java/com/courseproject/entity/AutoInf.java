@@ -1,5 +1,7 @@
 package com.courseproject.entity;
 
+import com.courseproject.helpers.AutoCheckStatus;
+
 public class AutoInf {
 
     private int id;
@@ -14,6 +16,10 @@ public class AutoInf {
     private int ecoClass;
     private int numberOfaxles;
     private String brakeSystem;
+
+    private AutoCheckStatus autoCheckStatus;
+
+
 
     public AutoInf(){
 
@@ -115,4 +121,7 @@ public class AutoInf {
         this.brakeSystem = brakeSystem;
     }
 
+    public AutoCheckStatus getAutoCheckStatus() {
+        return autoCheckStatus;
+    }
 }

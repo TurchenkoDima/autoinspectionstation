@@ -6,9 +6,11 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 
 public class Engine extends AutoSystem{
-    private static final String URL = "src\\main\\java\\com\\courseproject\\resources\\Engine.xml";
+    private static final String URL = "src\\main\\java\\com\\courseproject\\resources\\Engine.resources";
+
     @Override
-    void toDoTest() throws IOException, SAXException {
+    boolean toDoTest() throws IOException, SAXException {
         malfunction = ParserXML.pars(URL);
+        return false;
     }
 }

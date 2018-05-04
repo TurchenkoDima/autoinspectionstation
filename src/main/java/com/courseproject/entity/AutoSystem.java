@@ -12,6 +12,12 @@ import java.util.LinkedList;
 public abstract class AutoSystem {
     /**/
     ArrayList<String> malfunction = new ArrayList<>();
+    ArrayList<String> generatedErrors = new ArrayList<>();
 
-    abstract void toDoTest() throws IOException, SAXException;
+    abstract boolean toDoTest() throws IOException, SAXException;
+
+    public ArrayList<String> getGeneratedErrors() { return generatedErrors; }
+    public ArrayList<String> getMalfunction() {
+        return malfunction;
+    }
 }

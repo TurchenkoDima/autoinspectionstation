@@ -1,6 +1,7 @@
 package com.courseproject.controller;
 
 import com.courseproject.entity.AutoInf;
+import com.courseproject.entity.BreakSystem;
 import com.courseproject.entity.TechEngineer;
 import com.courseproject.service.AutoInfService;
 import com.courseproject.service.TechEngineerService;
@@ -8,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.xml.sax.SAXException;
+
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/")
@@ -25,7 +29,7 @@ public class TechEngineerController {
     }
 
     @PostMapping("/")
-    public String autorization(@ModelAttribute("form-login") TechEngineer techEngineerForm) {
+    public String autorization(@ModelAttribute("form-login") TechEngineer techEngineerForm) throws IOException, SAXException {
         TechEngineer engineer = techEngineerService.getByLogin(techEngineerForm.getLogin());
         if (engineer!=null) {
             if (engineer.getPassword().equals(techEngineerForm.getPassword()))

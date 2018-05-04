@@ -6,9 +6,10 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 
 public class Headlamps extends AutoSystem {
-    private static final String URL = "src\\main\\java\\com\\courseproject\\resources\\Headlamps.xml";
+    private static final String URL = "src\\main\\java\\com\\courseproject\\resources\\Headlamps.resources";
     @Override
-    void toDoTest() throws IOException, SAXException {
+    boolean toDoTest() throws IOException, SAXException {
         malfunction = ParserXML.pars(URL);
+        return false;
     }
 }

@@ -21,7 +21,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
         context.setServletContext(servletContext);
 
         //Диспетчер сервлетов который распределяет запросы по контроллерам. Передаём его в ServletContext.
-        // Это нужно чтобы не писать настройку диспетчера сервлетов в web-xml. Вот ссылка -> http://javastudy.ru/spring-mvc/spring-mvc-basic/
+        // Это нужно чтобы не писать настройку диспетчера сервлетов в web-resources. Вот ссылка -> http://javastudy.ru/spring-mvc/spring-mvc-basic/
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/app/*");

@@ -21,6 +21,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         freeMarkerViewResolver.setOrder(1); // порядок когда он будет загружаться ( то есть в самом начале)
         freeMarkerViewResolver.setSuffix(".ftl");
         freeMarkerViewResolver.setPrefix("");
+        freeMarkerViewResolver.setContentType("text/html; charset=windows-1251");
         return freeMarkerViewResolver;
     }
 
