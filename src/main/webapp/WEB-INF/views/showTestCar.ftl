@@ -28,10 +28,10 @@
     <div id="carousel">
         <figure id="spinner">
             <div id="image"><a href="/app/test/breakSystem/${auto.id}"><img src="/resources/static/img/brakeSystem.jpg" alt></a></div>
-            <div id="image"><img src="/resources/static/img/engine.jpg" alt></div>
-            <div id="image"><img src="/resources/static/img/Exhaust.jpg" alt></div>
-            <div id="image"><img src="/resources/static/img/Headlamps.jpg" alt></div>
-            <div id="image"><img src="/resources/static/img/rudder.jpg" alt></div>
+            <div id="image"><a href="/app/test/engineSystem/${auto.id}"><img src="/resources/static/img/engine.jpg" alt></a></div>
+            <div id="image"><a href="/app/test/exhaustSystem/${auto.id}"><img src="/resources/static/img/Exhaust.jpg" alt></a></div>
+            <div id="image"><a href="/app/test/headlampsSystem/${auto.id}"><img src="/resources/static/img/Headlamps.jpg" alt></a></div>
+            <div id="image"><a href="/app/test/rudderSystem/${auto.id}"><img src="/resources/static/img/rudder.jpg" alt></a></div>
         </figure>
     </div>
 

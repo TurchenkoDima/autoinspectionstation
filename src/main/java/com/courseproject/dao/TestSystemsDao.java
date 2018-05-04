@@ -9,4 +9,17 @@ public interface TestSystemsDao {
 
     void saveBrakeSystem (int autoId, String error);
     List<TestError> getBrakeErrorsByAutoId (int id);
+
+    void saveEngineSystem (int autoId, String error);
+    List<TestError> getEngineErrorsByAutoId (int id);
+
+    void saveExhaustSystem (int autoId, String error);
+    List<TestError> getExhaustErrorsByAutoId (int id);
+
+    void saveHeadlampsSystem (int autoId, String error);
+    List<TestError> getHeadlampsErrorsByAutoId (int id);
+
+    void saveRudderSystem (int autoId, String error);
+    List<TestError> getRudderErrorsByAutoId (int id);
+
 }

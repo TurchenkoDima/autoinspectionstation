@@ -2,14 +2,26 @@ package com.courseproject.entity;
 
 import com.courseproject.parser.ParserXML;
 import org.xml.sax.SAXException;
+import random.RandomSystem;
 
 import java.io.IOException;
 
 public class Headlamps extends AutoSystem {
-    private static final String URL = "src\\main\\java\\com\\courseproject\\resources\\Headlamps.resources";
+    private static final String URL = "file:E:\\Programming\\Курсач\\autoinspectionstation\\src\\main\\java\\resources\\Headlamps.xml";
     @Override
-    boolean toDoTest() throws IOException, SAXException {
+    public boolean toDoTest() throws IOException, SAXException {
         malfunction = ParserXML.pars(URL);
+        generatedErrors.clear();
+        int rand = RandomSystem.generateError();
+        if (rand > 0) {
+            for (int i = 0; i < rand; i++) {
+                int index = RandomSystem.generateIndex(malfunction.size());
+                generatedErrors.add(malfunction.get(index));
+                System.out.println(malfunction.get(index));
+            }
+            return true;
+        }
         return false;
     }
+
 }

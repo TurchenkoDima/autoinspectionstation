@@ -1,8 +1,7 @@
 package com.courseproject.config;
 
 import com.courseproject.dao.*;
-import com.courseproject.entity.AutoInf;
-import com.courseproject.entity.BreakSystem;
+import com.courseproject.entity.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -49,6 +48,25 @@ public class SpringConfig {
     @Bean
     public BreakSystem getBrakeSystem(){
         return new BreakSystem();
+    }
+
+    @Bean
+    public Engine getEngineSystem(){
+        return new Engine();
+    }
+
+    @Bean
+    public Exhaust getExhaustSystem(){
+        return new Exhaust();
+    }
+
+    @Bean
+    public Headlamps getHeadlampsSystem() { return new Headlamps();
+    }
+
+    @Bean
+    public Rudder getRudderSystem(){
+        return new Rudder();
     }
 
 }
